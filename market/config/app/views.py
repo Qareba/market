@@ -14,3 +14,14 @@ class UpdateView(UpdateView):
     fields = '__all__'
     template_name = "create_form.html"
     success_url = reverse_lazy('main')
+
+class CatalogCreateView(CreateView):
+    models = models.Catalog
+    fields = '__all__'
+    template_name = 'create_form.html'
+    success_url = reverse_lazy('main')
+
+class CatologListView(ListView):
+    model = models.Catalog
+    template_name = 'main.html'
+    context_object_name = 'catalogs'

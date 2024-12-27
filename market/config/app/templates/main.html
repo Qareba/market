@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>hello</h1>
+    <ul class="list-group">
+        {% for catalog in catalogs %}
+  <li class="list-group-item">{{ catalog.name }}</li>
+  <li class="list-group-item">{{ catalog.price }}</li>
+  <li class="list-group-item">{{ catalog.discription }}</li>
+  <li class="list-group-item">{{ catalog.category }}</li>
+  <li class="list-group-item">{{ catalog.market }}</li>
+        {% endfor %}
+</ul>
+
 {% endblock content %}
