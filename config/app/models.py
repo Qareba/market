@@ -4,7 +4,9 @@ class Catalog(models.Model):
     name = models.CharField(max_length = 255)
     price = models.IntegerField()
     discription = models.TextField()
-    #модель категория связвать
+    category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True ,blank=True)
+    market = models.ForeignKey('Markets', on_delete=models.SET_NULL, null=True ,blank=True)
+    #gfadsfdfgdsgfsdfdsggs
 
 
 
